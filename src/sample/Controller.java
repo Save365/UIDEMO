@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -21,11 +22,18 @@ public class Controller implements Initializable {
     private PasswordField password;
     @FXML
     private Button btnLogin;
+    @FXML
+    private Label dbStatus;
 
+    private loginModel loginModel = new loginModel();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+    if (this.loginModel.isDatabaseConnection()){
+        this.dbStatus.setText("Connnection to db");
+    }else {
+        this.dbStatus.setText("Not connection to db");
+    }
     }
 
     @FXML
