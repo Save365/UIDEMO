@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 
 import javax.swing.*;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -38,17 +39,31 @@ public class Controller implements Initializable {
 
     @FXML
     public void Login(ActionEvent event) {
-        try {
-            if (id.equals(username.getText())  && pass.equals(password.getText())){
-                JOptionPane.showMessageDialog(null, "welcome to MIT SaiYai App");
-        }else{
-                JOptionPane.showMessageDialog(null,
-                        "your username or password is invalid",
-                        "warning Massage",
-                        JOptionPane.WARNING_MESSAGE);
-        }
+//        try {
+//            if (id.equals(username.getText())  && pass.equals(password.getText())){
+//                JOptionPane.showMessageDialog(null, "welcome to MIT SaiYai App");
+//        }else{
+//                JOptionPane.showMessageDialog(null,
+//                        "your username or password is invalid",
+//                        "warning Massage",
+//                        JOptionPane.WARNING_MESSAGE);
+//        }
+//
+//    }catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
-    }catch (Exception e) {
+        try {
+            if (this.loginModel.isLogin(this.username.getText(), this.password.getText())) {
+                JOptionPane.showMessageDialog(null,
+                        "welcome to MIT SaiYai App");
+            }else{
+                JOptionPane.showMessageDialog(null,
+                       "your username or password is invalid",
+                       "warning Massage",
+                        JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
