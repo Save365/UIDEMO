@@ -86,9 +86,9 @@
       </TableView>
       <JFXTextField layoutX="206.0" layoutY="63.0" prefHeight="31.0" prefWidth="255.0" style="-fx-background-color: #e1bee7;" />
       <FontAwesomeIconView glyphName="SEARCH" layoutX="171.0" layoutY="89.0" size="30" />
-      <JFXButton layoutX="686.0" layoutY="66.0" style="-fx-background-color: #e1bee7;" text="load">
+      <JFXButton fx:id="btnload" layoutX="686.0" layoutY="66.0" onAction="#loadEmployeeData" style="-fx-background-color: #e1bee7;" text="load">
          <graphic>
-            <FontAwesomeIconView glyphName="DOWNLOAD" size="15" />
+            <FontAwesomeIconView glyphName="DOWNLOAD" onDragDetected="#loadEmployeeData" size="15" />
          </graphic>
       </JFXButton>
    </children>

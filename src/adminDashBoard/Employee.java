@@ -16,8 +16,8 @@ public class Employee {
         this.id = new SimpleStringProperty(id);
         this.name = new SimpleStringProperty(name);
         this.position = new SimpleStringProperty(position);
-        this.email = new new SimpleStringProperty(email);
-        this.salary = new new SimpleStringProperty(salary);
+        this.email =new SimpleStringProperty(email);
+        this.salary = new SimpleStringProperty(salary);
     }
 
     public String getId() {
