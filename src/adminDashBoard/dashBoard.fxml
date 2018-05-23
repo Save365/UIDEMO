@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #fff1ff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminDashBoard.dashBoardController">
    <children>
       <Pane prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #af8eb5;">
@@ -76,13 +75,13 @@
             </VBox>
          </children>
       </Pane>
-      <TableView layoutX="160.0" layoutY="99.0" prefHeight="394.0" prefWidth="626.0">
+      <TableView fx:id="employeeTable" layoutX="160.0" layoutY="99.0" prefHeight="394.0" prefWidth="626.0">
         <columns>
-          <TableColumn prefWidth="85.0" text="ID" />
-          <TableColumn prefWidth="197.0" text="Name" />
-            <TableColumn minWidth="0.0" prefWidth="104.0" text="Position" />
-            <TableColumn prefWidth="145.0" text="Email" />
-            <TableColumn prefWidth="94.0" text="Salary" />
+          <TableColumn fx:id="idcolumn" prefWidth="85.0" text="ID" />
+          <TableColumn fx:id="namecolumn" prefWidth="197.0" text="Name" />
+            <TableColumn fx:id="positioncolum" minWidth="0.0" prefWidth="104.0" text="Position" />
+            <TableColumn fx:id="emailcolumn" prefWidth="145.0" text="Email" />
+            <TableColumn fx:id="saralrycolumn" prefWidth="94.0" text="Salary" />
         </columns>
       </TableView>
       <JFXTextField layoutX="206.0" layoutY="63.0" prefHeight="31.0" prefWidth="255.0" style="-fx-background-color: #e1bee7;" />
